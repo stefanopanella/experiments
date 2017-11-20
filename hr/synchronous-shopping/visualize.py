@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+import math
+
 N, M, K = raw_input("").split(" ")
 N, M, K = int(N), int(M), int(K)
 
@@ -27,6 +29,6 @@ for i in range(N):
 for i in range(M):
     v = raw_input("").split(" ")
     v = map(lambda x: int(x), v)
-    print " n%d -- n%d [label=\"%d\", weight=%d, penwidth=%d];" % (v[0], v[1], v[2], v[2], v[2]/100)
+    print " n%d -- n%d [label=\"%d\", weight=%d, penwidth=%d];" % (v[0], v[1], v[2], v[2], math.floor(v[2]/100)+1)
 
 print "}"
